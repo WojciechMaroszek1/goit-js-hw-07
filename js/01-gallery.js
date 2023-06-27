@@ -49,19 +49,19 @@ console.log(gallery);
 //     instance.show();
 // });
 
-gallery.addEventListener("click", element => {
-    element.preventDefault();
-    if (element.target.nodeName !== "IMG") return;
-    const handleEscapeKey = element => { if (element.key === "Escape") instance.close() };
-    const instance = basicLightbox.create(
-        `<img src="${element.target.dataset.source}">`,
-        {
-            onShow: () => {
-                document.addEventListener("keydown", handleEscapeKey);
-            },
-            onClose: () => {
-                document.removeEventListener("keydown", handleEscapeKey);
-            },
-        });
-    instance.show();
-});
+// gallery.addEventListener("click", element => {
+//     element.preventDefault();
+//     if (element.target.nodeName !== "IMG") return;
+//     const handleEscapeKey = element => { if (element.key === "Escape") instance.close() };
+//     const instance = basicLightbox.create(
+//         `<img src="${element.target.dataset.source}">`,
+//         {
+//             onShow: () => {
+//                 document.addEventListener("keydown", handleEscapeKey);
+//             },
+//             onClose: () => {
+//                 document.removeEventListener("keydown", handleEscapeKey);
+//             },
+//         });
+//     instance.show();
+// });
